@@ -135,7 +135,7 @@ export async function createPoolParams(
   const normalizedWeights = [fp(0.5), fp(0.5)];
   const intNormalizedWeights = [...normalizedWeights];
 
-  const poolDetails = [['Overview', 'Adaptability', 'number', '5']];
+  const poolDetails = [['overview', 'adaptabilityScore', 'number', '5']];
 
   const poolSettings: PoolSettings = {
     assets: tokens,
@@ -151,7 +151,7 @@ export async function createPoolParams(
   };
 
   return {
-    name: 'test quantamm pool 2',
+    name: 'test quantamm pool 3',
     symbol: 'test',
     tokens: sortedTokenConfig,
     normalizedWeights,

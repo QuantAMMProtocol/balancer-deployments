@@ -62,9 +62,9 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
 
   if (task.mode === TaskMode.LIVE) {
     //rule is registered during pool creation, needs oracles to be valid
-    await updateWeightRunner.addOracle(chainlinkEthOracleWrapper.address);
-    await updateWeightRunner.addOracle(chainlinkBtcOracleWrapper.address);
-    await updateWeightRunner.addOracle(chainlinkUsdcOracleWrapper.address);
+    //await updateWeightRunner.addOracle(chainlinkEthOracleWrapper.address);
+    //await updateWeightRunner.addOracle(chainlinkBtcOracleWrapper.address);
+    //await updateWeightRunner.addOracle(chainlinkUsdcOracleWrapper.address);
 
     const salt = ethers.utils.keccak256(
       ethers.utils.defaultAbiCoder.encode(['address', 'uint256'], [accountAddress, Math.floor(Date.now() / 1000)])
@@ -87,10 +87,10 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
       const mockPoolAddress = event.args.pool;
 
       await saveContractDeploymentTransactionHash(mockPoolAddress, poolCreationReceipt.transactionHash, task.network);
-      await task.save({ MockQuantAMMWeightedPool: mockPoolAddress });
+      await task.save({ QuantAMMWeightedPool: mockPoolAddress });
     }
 
-    const mockPool = await task.instanceAt('QuantAMMWeightedPool', task.output()['MockQuantAMMWeightedPool']);
+    const mockPool = await task.instanceAt('QuantAMMWeightedPool', task.output()['QuantAMMWeightedPool']);
 
     const poolParams = {
       name: params.name,

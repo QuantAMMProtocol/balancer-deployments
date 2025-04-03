@@ -1,0 +1,8 @@
+{
+  "ChainlinkOracle": "0xebd5B40FF5cF434c1474b9dD13B6127eEA2a55Cb",
+  "ChainlinkEthOracle": "0xebd5B40FF5cF434c1474b9dD13B6127eEA2a55Cb",
+  "ChainlinkBtcOracle": "0xebd5B40FF5cF434c1474b9dD13B6127eEA2a55Cb",
+  "ChainlinkUsdcOracle": "0xebd5B40FF5cF434c1474b9dD13B6127eEA2a55Cb",
+  "MockQuantAMMWeightedPool": "0xbFc25cf80a85A0e6174dadfed9626C99E2E9aB01",
+  "QuantAMMWeightedPool": "0x2E629cd9061E2B5214B6CFc8d001DEB726275Eb0"
+}
