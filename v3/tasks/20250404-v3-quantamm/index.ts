@@ -62,9 +62,6 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
 
   if (task.mode === TaskMode.LIVE) {
     //rule is registered during pool creation, needs oracles to be valid
-    //await updateWeightRunner.addOracle(chainlinkEthOracleWrapper.address);
-    //await updateWeightRunner.addOracle(chainlinkBtcOracleWrapper.address);
-    //await updateWeightRunner.addOracle(chainlinkUsdcOracleWrapper.address);
 
     const salt = ethers.utils.keccak256(
       ethers.utils.defaultAbiCoder.encode(['address', 'uint256'], [accountAddress, Math.floor(Date.now() / 1000)])
