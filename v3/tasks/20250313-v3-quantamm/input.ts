@@ -151,8 +151,8 @@ export async function createPoolParams(
   };
 
   return {
-    name: 'test quantamm pool 3',
-    symbol: 'test',
+    name: 'test quantamm rule pipes',
+    symbol: 'test pipes',
     tokens: sortedTokenConfig,
     normalizedWeights,
 
