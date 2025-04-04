@@ -170,7 +170,7 @@ export async function createPoolParams(
     _poolSettings: poolSettings,
     _initialMovingAverages: intermediateValueStubs,
     _initialIntermediateValues: intermediateValueStubs,
-    _oracleStalenessThreshold: bn('3600'),
+    _oracleStalenessThreshold: bn('360000000'),
     poolRegistry: bn('16'),
     poolDetails,
   };
